@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-11 col-md-6" style="margin-bottom: 190px">
+    <div class="title-brand ">
+      <div class="presentation-title text-center mb-5">Blog project</div>
+      <div class="subtitle text-light text-center text mb-5">Angular project UTT 2021</div>
+    </div>
+  </div>
+  <div class="col col-11 col-md-6">
+    <div>
+      <div class="card">
+        <div class="card-header card-header-tabs bg-info xd"
+             style="margin-top: -20px; border-radius: 3px; padding: 15px;">
+          <div class="">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link text-light btn" (click)="switchTables('A')" [ngClass]="{'active text-dark':tableA}">Content</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light btn" (click)="switchTables('B')" [ngClass]="{'active text-dark':tableB}">Team Members</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light btn" (click)="switchTables('C')" [ngClass]="{'active text-dark':tableC}">Dev Tools</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush" [@openClose]="this.tableA? 'open':'close'">
+            <li class="list-group-item">Blog Front End in Angular</li>
+            <li class="list-group-item">Blog Back End in AdonisJs</li>
+            <li class="list-group-item">Database MySql</li>
+            <li class="list-group-item">Database MongoDB</li>
+          </ul>
+          <ul class="list-group list-group-flush" [@openClose]="this.tableB? 'open':'close'">
+            <li class="list-group-item">Gabriel Ruiseco</li>
+            <li class="list-group-item">Dr. Angel Valdez</li>
+            <li class="list-group-item">Dr. Cesar Sanchez</li>
+            <li class="list-group-item">Dr. Victor Maldonado</li>
+          </ul>
+          <ul class="list-group list-group-flush" [@openClose]="this.tableC? 'open':'close'">
+            <li class="list-group-item"><a href="https://adonisjs.com">AdonisJs</a></li>
+            <li class="list-group-item"><a href="https://www.mysql.com">MySql</a></li>
+            <li class="list-group-item"><a href="https://www.mongodb.com/es">MongoDB</a></li>
+            <li class="list-group-item"><a href="https://mongoosejs.com">Mongoose</a></li>
+            <li class="list-group-item"><a href="https://angular.io/guide/what-is-angular">Angular</a></li>
+            <li class="list-group-item"><a href="https://getbootstrap.com">Bootstrap</a></li>
+            <li class="list-group-item"><a href="https://sweetalert2.github.io">SweetAlert</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col text-light">
+    <h3>Project Description</h3>
+    <h4>Back End</h4>
+    <p style="text-align: justify">This blog is a project developed to implement multiple relational and nonrelational
+      databases on a
+      server and developed by students of the Technological University of Torreón.
+    </p>
+    <p style="text-align: justify">We have used adonisJs as a framework for server development, adding mongodb as a
+      Non-SQL database and mysql for the SQL part. Publications are directed to the SQL database and comments to Non-SQL
+      database.</p>
+    <p>
+      While adonisJS provides the Lucid models to drive the flow of data to the sql database, we have had to add the
+      mongoose library to handle the data directed to the non-sql database.
+    </p>
+    <h4>Front End</h4>
+    <p>In the Front End, we use the framwork Angular to create components for the different views that the blog handles,
+      developing as well as the responsive client in a single page application(SPA).</p>
+  </div>
+</div>
